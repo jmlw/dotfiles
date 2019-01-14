@@ -59,6 +59,7 @@ recipes=(
   vim
   wget
   yarn
+  zsh
 )
 
 brew_install_recipes

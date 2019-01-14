@@ -44,6 +44,7 @@ apt_packages+=(
   sl
   thefuck
   tree
+  zsh
 )
 
 apt_packages+=(vim)
