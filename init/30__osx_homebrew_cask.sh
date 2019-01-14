@@ -21,21 +21,20 @@ casks=(
   a-better-finder-rename
   android-file-transfer
   android-platform-tools
-  arial
+  aerial
   boostnote
   chromium
   datagrip
   disk-inventory-x
   docker
-  docker-compose
   dropbox
-  etcher
+  # etcher
   filezilla
   firefox
   gitter
   google-chrome
   hermes
-  insomnia-x
+  insomniax
   intellij-idea
   iterm2
   java
