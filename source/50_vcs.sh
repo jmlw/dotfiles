@@ -198,3 +198,19 @@ if is_osx; then
     fi
   }
 fi
+
+push() { git push -u origin `git rev-parse --abbrev-ref HEAD`; }
+checkout() {
+  if [ -z $1 ]
+  then
+    echo "Branch name is requried as the 1st parameter";
+  else
+    EXISTS=$(git branch | grep -w $1 | wc -l)
+    if [ $EXISTS -eq 1 ]
+    then
+      git checkout $1
+    else
+      git checkout -b $1;
+    fi
+  fi
+}
