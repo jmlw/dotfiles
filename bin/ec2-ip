@@ -1,0 +1,8 @@
+#!/bin/bash
+id=$1
+if [ -z "$id" ]; then
+  echo "supply instance ID as only argument"
+  exit 1
+fi
+
+aws ec2 describe-instances --instance-id $id | jq '.Reservations[0].Instances[0].NetworkInterfaces[0].PrivateIpAddress' --raw-output

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+id=$1
+if [ -z "$id" ]; then
+  echo "provide instnace id as only arg"
+  exit 1;
+fi
+
+ssh -i ~/.ssh/linsight.pem ec2-user@$(ec2-ip $id)

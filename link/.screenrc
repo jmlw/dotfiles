@@ -1,0 +1,28 @@
+shell "/bin/zsh"
+#caption always "%?%F%{= Kk}%:%{=u kR}%?  %h %-024=%{+b} %C%a %D %d %M %Y%{= db}"
+#caption     always        "%{+b rk}%H%{gk} |%c %{yk}%d.%m.%Y | %72=Load: %l %{wk}"
+#hardstatus alwayslastline "%?%{yk}%-Lw%?%{wb}%n*%f %t%?(%u)%?%?%{yk}%+Lw%?"
+#caption always "%?%F%{= kw}[%{= g}%c%{+b g}%D%{= kw}] %{= c}%Y%{+b c}%M%{= c}%d%{= w} -*-%?%F%? %L=%-Lw%45>%{+r} %n%f* %t %{-}%+Lw%-0<"
+
+hardstatus alwayslastline 
+# Very nice tabbed colored hardstatus line
+#hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%{KY}%101`%{KW}|%D %M %d %Y%{= Kc} %C%A%{-}'
+
+hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW} | %D %M %d %Y%{= Kc} %C%A%{-}'
+
+### screen forcing resize fix
+# http://superuser.com/questions/374752/reattaching-screen-having-irssi-running-forces-window-resize
+termcap xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+terminfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+
+
+#termcapinfo xterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+defhstatus "screen ^E (^Et) | $USER@^EH"
+autodetach on
+defscrollback 30000
+
+
+termcapinfo xterm* ti@:te@
+# From http://www4.informatik.uni-erlangen.de/~jnweiger/screen-faq.html
+# Q: My xterm scrollbar does not work with screen.
+# A: The problem is that xterm will not allow scrolling if the alternate text buffer is selected. The standard definitions of the termcap initialize capabilities ti and te switch to and from the alternate text buffer. (The scrollbar also does not work when you start e.g. ‘vi’). You can tell screen not to use these initialisations by adding the line “termcapinfo xterm ti@:te@” to your ~/.screenrc file.
