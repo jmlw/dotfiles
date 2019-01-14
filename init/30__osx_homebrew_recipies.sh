@@ -38,6 +38,7 @@ recipes=(
   postgresql
   python
   python3
+  docker-compose
   rbenv
   reattach-to-user-namespace
   rename
