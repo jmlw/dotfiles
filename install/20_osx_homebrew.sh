@@ -83,6 +83,7 @@ formulae=(
   nmap
   perl
   postgresql
+  pipenv
   python
   python3
   docker-compose
