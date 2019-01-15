@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Homebrew installs python2 pip as "pip2"
 for pip_cmd in pip2 pip FAIL; do [[ "$(which $pip_cmd)" ]] && break; done
 

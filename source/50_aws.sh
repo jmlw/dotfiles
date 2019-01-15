@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 # Get currently logged in aws account name
 function aws-account() {
@@ -120,7 +121,7 @@ function aws-stop-tasks() {
 }
 
 # Log info lines to stderr
-function info() {
+function __info_log() {
   local prefix=$1; shift
   echo "[$prefix] $@" 1>&2
 }
@@ -146,9 +147,9 @@ function aws-logs() {
     fi
   done <<< "$text"
   if [[ "$next_token" != "$1" ]]; then
-    info LOG "Fetching more..."
+    __info_log LOG "Fetching more..."
     aws_logs $group_name $stream_name $next_token
   else
-    info LOG "Done!"
+    __info_log LOG "Done!"
   fi
 }
