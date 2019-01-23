@@ -7,6 +7,8 @@
   excludesfile = ~/.gitignore_global
 [apply]
   whitespace = fix
+[push]
+	default = current
 [url "git@github.com:"]
   insteadOf = "gh:"
   pushInsteadOf = "github:"
