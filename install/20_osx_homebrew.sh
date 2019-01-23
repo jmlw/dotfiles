@@ -167,7 +167,7 @@ casks=(
   disk-inventory-x
   docker
   dropbox
-  # etcher
+  balenaetcher
   filezilla
   firefox
   gitter
