@@ -257,7 +257,7 @@ function setdiff() {
 }
 
 # If this file was being sourced, exit now.
-[[ "$1" == "source" ]] && return
+[[ "$1" == "source" ]] && exit 0
 
 
 ###########################################
@@ -294,7 +294,7 @@ function install_files() {
       [[ "$remove" ]] || menu_selects=("${menu_selects[@]}" "$opt")
     done
   fi
-  prompt_menu "Run the following init scripts?" $prompt_delay
+  prompt_menu "Run the following install scripts?" $prompt_delay
   # Write out cache file for future reading.
   rm "$init_file" 2>/dev/null
   for i in "${!menu_selects[@]}"; do
@@ -303,7 +303,7 @@ function install_files() {
   done
 }
 function install_do() {
-  e_header "Sourcing $(basename "$2")"
+  e_header "Running install $(basename "$2")"
   source "$2"
 }
 
@@ -347,7 +347,7 @@ function config_do() {
 # Copy, link, init, etc.
 function do_stuff() {
   local base dest skip
-  local files=($DOTFILES/$1/*)
+  local files=$(ls -A $DOTFILES/$1)
   [[ $(declare -f "$1_files") ]] && files=($($1_files "${files[@]}"))
   # No files? abort.
   if (( ${#files[@]} == 0 )); then return; fi
