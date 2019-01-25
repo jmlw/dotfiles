@@ -67,6 +67,29 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(
   git
   screen
+  aws
+  brew
+  common-aliases
+  docker
+  encode64
+  extract
+  geeknote
+  gpg-agent
+  git-extras
+  gradle
+  httpie
+  history
+  mvn
+  npm
+  osx
+  perms
+  pip
+  pyenv
+  pylint
+  python
+  tmux
+  urltools
+  vagrant
 )
 
 source $ZSH/oh-my-zsh.sh
