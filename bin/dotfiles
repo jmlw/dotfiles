@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 [[ "$1" == "source" ]] || \
 
 echo '''
@@ -256,7 +257,7 @@ function setdiff() {
 }
 
 # If this file was being sourced, exit now.
-[[ "$1" == "source" ]] && exit 0
+[[ "$1" == "source" ]] && return
 
 
 ###########################################
@@ -528,3 +529,6 @@ fi
 # All done!
 e_header "All done!"
 e_header "Changing shell to ZSH!"
+
+env zsh
+. ~/.zshrc
