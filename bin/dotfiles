@@ -382,7 +382,7 @@ function do_stuff() {
       fi
     fi
     # Do stuff.
-    "$1_do" "$DOTFILES/$1/$base" "$file"
+    "$1_do" "$base" "$DOTFILES/$1/$file"
   done
 }
 

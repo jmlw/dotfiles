@@ -116,23 +116,23 @@ brew_install_formulae
 # Misc cleanup!
 
 # This is where brew stores its binary symlinks
-local binroot="$(brew --config | awk '/HOMEBREW_PREFIX/ {print $2}')"/bin
+_brew_bin_root="$(brew --config | awk '/HOMEBREW_PREFIX/ {print $2}')"/bin
 
 # htop
-if [[ "$(type -P $binroot/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$binroot/htop")" != "root:wheel" || ! "$(($(stat -L -f "%DMp" "$binroot/htop") & 4))" ]]; then
+if [[ "$(type -P $_brew_bin_root/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$_brew_bin_root/htop")" != "root:wheel" || ! "$(($(stat -L -f "%DMp" "$_brew_bin_root/htop") & 4))" ]]; then
   e_header "Updating htop permissions"
-  sudo chown root:wheel "$binroot/htop"
-  sudo chmod u+s "$binroot/htop"
+  sudo chown root:wheel "$_brew_bin_root/htop"
+  sudo chmod u+s "$_brew_bin_root/htop"
 fi
 
 # bash
-if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash")" ]]; then
-  e_header "Adding $binroot/bash to the list of acceptable shells"
-  echo "$binroot/bash" | sudo tee -a /etc/shells >/dev/null
+if [[ "$(type -P $_brew_bin_root/bash)" && "$(cat /etc/shells | grep -q "$_brew_bin_root/bash")" ]]; then
+  e_header "Adding $_brew_bin_root/bash to the list of acceptable shells"
+  echo "$_brew_bin_root/bash" | sudo tee -a /etc/shells >/dev/null
 fi
-if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/bash" ]]; then
-  e_header "Making $binroot/bash your default shell"
-  sudo chsh -s "$binroot/bash" "$USER" >/dev/null 2>&1
+if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$_brew_bin_root/bash" ]]; then
+  e_header "Making $_brew_bin_root/bash your default shell"
+  sudo chsh -s "$_brew_bin_root/bash" "$USER" >/dev/null 2>&1
   e_arrow "Please exit and restart all your shells."
 fi
 
@@ -225,6 +225,7 @@ casks=(
   # Drivers
   sonos
   # Fonts
+  font-source-code-pro-for-powerline
 )
 
 # Install Homebrew casks.
