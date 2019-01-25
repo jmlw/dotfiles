@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 
 # Get currently logged in aws account name
 function aws-account() {
