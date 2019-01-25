@@ -1,10 +1,13 @@
-paths=(
-  ~/.local/bin
-  $DOTFILES/bin
-)
-
-export PATH
-for p in "${paths[@]}"; do
-  [[ -d "$p" ]] && PATH="$p:$(path_remove "$p")"
-done
-unset p paths
+#paths=(
+#  ~/.local/bin
+#  $DOTFILES/bin
+#  /usr/local/bin
+#  /usr/bin
+#  /usr/sbin
+#)
+#
+#export PATH
+#for p in "${paths[@]}"; do
+#  [[ -d "$p" ]] && PATH="$p:$(path_remove "$p")"
+#done
+#unset p paths
