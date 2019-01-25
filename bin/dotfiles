@@ -528,6 +528,3 @@ fi
 # All done!
 e_header "All done!"
 e_header "Changing shell to ZSH!"
-
-env zsh
-. ~/.zshrc
