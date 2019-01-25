@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# set JAVA_HOME environment variable for java 8
+alias vi='/usr/local/bin/vim'
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+pyenv_bin=$(command -v pyenv)
+if [[ -z "$pyenv_bin" ]]; then
+  echo "no pyenv command found! make sure it is on the system path!"
+else
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+
+brew_binary=`command -v brew`
+if [[ -z "$brew_binary"  ]]; then
+  echo 'no brew'
+else
+  if [ -d "$(brew --prefix)/etc/bash_completion.d" ]; then
+    for f in $(brew --prefix)/etc/bash_completion.d/*; do source $f; done
+  fi
+fi

@@ -178,7 +178,7 @@ screen_title_cmd() {
   echo "$SCREENTITLE"
 }
 
-source ~/.posh-git.sh
+source ~/.git-prompt.sh
 export PROMPT_COMMAND='__posh_git_ps1 "$(ps1_assemble)" " $(ps1_suffix) ";'$(update_term_cwd_command)
 
 # tabtab source for serverless package
