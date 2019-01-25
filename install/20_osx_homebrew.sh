@@ -168,7 +168,7 @@ casks=(
   docker
   dropbox
   balenaetcher
-  filezilla
+#  filezilla
   firefox
   gitter
   google-chrome
@@ -206,9 +206,9 @@ casks=(
   vlc
   webstorm
   # Quick Look plugins
-  betterzipql
+#  betterzipql
   qlcolorcode
-  qlimagesize
+#  qlimagesize
   qlmarkdown
   qlprettypatch
   qlstephen
