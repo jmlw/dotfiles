@@ -73,11 +73,11 @@ plugins=(
   docker
   encode64
   extract
-  geeknote
-  gpg-agent
+#  geeknote
+#  gpg-agent
   git-extras
   gradle
-  httpie
+#  httpie
   history
   mvn
   npm
@@ -87,9 +87,9 @@ plugins=(
   pyenv
   pylint
   python
-  tmux
-  urltools
-  vagrant
+#  tmux
+#  urltools
+#  vagrant
 )
 
 source $ZSH/oh-my-zsh.sh
