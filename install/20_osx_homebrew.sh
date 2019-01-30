@@ -219,6 +219,7 @@ casks=(
   quicknfo
   suspicious-package
   webpquicklook
+  kindle
   # Color pickers
   colorpicker-developer
   colorpicker-skalacolor
