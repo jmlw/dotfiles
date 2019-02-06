@@ -10,3 +10,6 @@
 [submodule "link/.vim/autoload/editorconfig-vim"]
 	path = link/.vim/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "link/.vim/autoload/kotlin-vim"]
+  path = link/.vim/kotlin-vim
+  url = https://github.com/udalov/kotlin-vim.git
