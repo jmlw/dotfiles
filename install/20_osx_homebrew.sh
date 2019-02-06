@@ -109,6 +109,7 @@ formulae=(
   wget
   yarn
   zsh
+  jhipster
 )
 
 brew_install_formulae
@@ -148,6 +149,7 @@ kegs=(
   caskroom/cask
   caskroom/drivers
   caskroom/fonts
+  caskroom/versions
 )
 brew_tap_kegs
 
@@ -219,6 +221,7 @@ casks=(
   quicknfo
   suspicious-package
   webpquicklook
+  java8
   # Color pickers
   colorpicker-developer
   colorpicker-skalacolor
@@ -235,7 +238,7 @@ if (( ${#casks[@]} > 0 )); then
   for cask in "${casks[@]}"; do
     brew cask install $cask
   done
-  brew cask cleanup
+  brew cleanup
 fi
 
 # Work around colorPicker symlink issue.

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export PATH="/usr/local/bin:$PATH"
 # set JAVA_HOME environment variable for java 8
 alias vi='/usr/local/bin/vim'
 export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"

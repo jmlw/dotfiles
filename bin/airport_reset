@@ -1,0 +1,5 @@
+#!/bin/sh
+now=$(date +"%T")
+echo "Fixing MacOS stupidity at $now"
+networksetup -setairportpower en0 off
+networksetup -setairportpower en0 on

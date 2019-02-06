@@ -22,5 +22,7 @@
 # Ignore any file with LOCAL in the name (good for per-machine vars/functions)
 *LOCAL*
 
+.netrwhist
+
 # I like to use IntelliJ for a lot of stuff, so let's ignore that too...
 .idea
