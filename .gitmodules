@@ -13,3 +13,6 @@
 [submodule "link/.vim/autoload/kotlin-vim"]
   path = link/.vim/kotlin-vim
   url = https://github.com/udalov/kotlin-vim.git
+[submodule "link/.vim/autoload/vim-terraform"]
+	path = link/.vim/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
