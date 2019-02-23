@@ -70,6 +70,7 @@ formulae=(
   git-flow
   git-lfs
   gnu-sed
+  gpg
   gradle
   htop-osx
   hub
