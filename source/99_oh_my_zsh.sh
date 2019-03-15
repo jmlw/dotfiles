@@ -90,6 +90,7 @@ plugins=(
 #  tmux
 #  urltools
 #  vagrant
+  virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
