@@ -79,6 +79,7 @@ plugins=(
   gradle
 #  httpie
   history
+  kubectl
   mvn
   npm
   osx
