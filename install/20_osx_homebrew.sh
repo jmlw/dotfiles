@@ -150,7 +150,7 @@ kegs=(
   caskroom/cask
   caskroom/drivers
   caskroom/fonts
-  caskroom/versions
+  homebrew/cask-versions
 )
 brew_tap_kegs
 
