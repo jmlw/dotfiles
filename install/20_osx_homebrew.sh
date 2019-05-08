@@ -181,6 +181,7 @@ casks=(
   iterm2
   java
   jd-gui
+  keep
   licecap
   macdown
   macvim
