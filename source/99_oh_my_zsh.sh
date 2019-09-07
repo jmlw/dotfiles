@@ -79,6 +79,7 @@ plugins=(
   gradle
 #  httpie
   history
+  kubectl
   mvn
   npm
   osx
@@ -90,7 +91,10 @@ plugins=(
 #  tmux
 #  urltools
 #  vagrant
+  virtualenv
 )
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv context dir vcs)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,3 +128,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #export PATH=/usr/local/bin:$PATH
 DEFAULT_USER="$(whoami)"
+
