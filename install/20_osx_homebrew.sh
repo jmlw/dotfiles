@@ -184,6 +184,7 @@ casks=(
   licecap
   macdown
   macvim
+  mediahuman-audio-converter
   mysqlworkbench
   osxfuse
   pgadmin4
