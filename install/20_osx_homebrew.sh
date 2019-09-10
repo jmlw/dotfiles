@@ -76,6 +76,9 @@ formulae=(
   hub
   id3tool
   jq
+  kubectx
+  kubernetes-cli
+  kubernetes-helm
   lesspipe
   man2html
   maven
