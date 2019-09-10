@@ -153,7 +153,7 @@ kegs=(
   caskroom/cask
   caskroom/drivers
   caskroom/fonts
-  caskroom/versions
+  homebrew/cask-versions
 )
 brew_tap_kegs
 
@@ -188,6 +188,7 @@ casks=(
   licecap
   macdown
   macvim
+  mediahuman-audio-converter
   mysqlworkbench
   osxfuse
   pgadmin4
