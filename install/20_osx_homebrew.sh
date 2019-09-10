@@ -192,7 +192,7 @@ casks=(
   mysqlworkbench
   osxfuse
   pgadmin4
-  plex-media-player
+  plex
   plexamp
   postman
   pycharm
