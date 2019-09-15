@@ -98,6 +98,7 @@ formulae=(
   ruby
   ruby-build
   screen
+  signal
   sl
   sqlite
   ssh-copy-id
