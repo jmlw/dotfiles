@@ -5,6 +5,9 @@ is_osx || return 1
 #PATH="/usr/local/bin:$(path_remove /usr/local/bin)"
 #export PATH
 
+# Set java version to any 1.8 version found
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"
 
