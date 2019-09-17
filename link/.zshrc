@@ -1,5 +1,4 @@
 
-
 export DOTFILES=~/.dotfiles
 
 # Source all files in "source"
@@ -20,3 +19,4 @@ function dotfiles() {
 }
 
 src
+[ -s "$HOME/.secrets" ] && source "$HOME/.secrets"
