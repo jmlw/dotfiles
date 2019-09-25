@@ -57,6 +57,7 @@ formulae=(
   ansible
   ant
   awscli
+  aws-elasticbeanstalk
   bash
   cmatrix
   coreutils
