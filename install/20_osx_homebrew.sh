@@ -114,6 +114,7 @@ formulae=(
   vim
   wget
   yarn
+  youtube-dl
   zsh
   jhipster
 )
@@ -171,6 +172,7 @@ casks=(
   aerial
   boostnote
   chromium
+  dash
   datagrip
   disk-inventory-x
   docker
