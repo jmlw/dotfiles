@@ -60,6 +60,7 @@ formulae=(
   aws-elasticbeanstalk
   bash
   cmatrix
+  cocoapods
   coreutils
   coreutils
   cowsay
@@ -167,7 +168,9 @@ brew cask info this-is-somewhat-annoying 2>/dev/null
 casks=(
   # Applications
   a-better-finder-rename
+  adoptopenjdk8
   android-file-transfer
+  android-studio
   android-platform-tools
   aerial
   boostnote
