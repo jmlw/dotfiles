@@ -95,6 +95,7 @@ plugins=(
 )
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv context dir vcs)
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
 source $ZSH/oh-my-zsh.sh
 
