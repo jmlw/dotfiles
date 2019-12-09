@@ -1,0 +1,44 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+prependBranchName() {
+    branchPath=$(git symbolic-ref -q HEAD)
+    branchName=${branchPath##*/}
+
+    firstLine=$(head -n1 $COMMIT_MSG_FILE)
+    branchNameCountInFirstLine=$(echo "$firstLine" | grep -i "$branchName" | wc -l)
+
+    branchPatternMatches=$(echo "$branchName" | grep -i "^rm-" | wc -l)
+
+    if [ "${branchPatternMatches}" -eq 1 ] && [ "${branchNameCountInFirstLine}" -eq 0 ]; then
+        echo "[${branchName}] $(cat $COMMIT_MSG_FILE)\n" > $COMMIT_MSG_FILE
+    fi
+}
+
+
+case "$COMMIT_SOURCE" in
+    commit)
+    prependBranchName $1
+    ;;
+
+    message)
+    prependBranchName $1
+    ;;
+
+    merge)
+    ;;
+
+    squash)
+    ;;
+
+    template)
+    ;;
+
+    # no message or template used for commit
+    *)
+    prependBranchName $1
+    ;;
+esac

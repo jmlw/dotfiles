@@ -100,7 +100,6 @@ formulae=(
   ruby
   ruby-build
   screen
-  signal
   sl
   sqlite
   ssh-copy-id
@@ -186,7 +185,6 @@ casks=(
   gitter
   google-chrome
   hermes
-  insomniax
   intellij-idea
   iterm2
   java
@@ -215,8 +213,6 @@ casks=(
   the-unarchiver
   tunnelblick
   vagrant
-  virtualbox
-  virtualbox-extension-pack
   visualvm
   vlc
   webstorm
