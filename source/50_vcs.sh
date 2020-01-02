@@ -214,3 +214,14 @@ checkout() {
     fi
   fi
 }
+
+clone() {
+  if [ -z $1 ]
+  then
+    echo "URL required to clone git repository"
+  else
+    REPO_PATH=$(echo "$1" | sed 's|http://||g;s|https://||g;s|git@||g;s|\.git||g;s|:|/|g')
+    git clone "$1" "${HOME}/projects/${REPO_PATH}"
+  fi
+}
+
