@@ -86,6 +86,7 @@ formulae=(
   maven
   mercurial
   moreutils
+  mysql
   nmap
   perl
   postgresql
@@ -117,6 +118,7 @@ formulae=(
   youtube-dl
   zsh
   jhipster
+  khipster
 )
 
 brew_install_formulae
@@ -174,6 +176,7 @@ casks=(
   aerial
   boostnote
   chromium
+  cyberduck
   dash
   datagrip
   disk-inventory-x

@@ -452,6 +452,7 @@ fi
 if is_osx && [[ ! -d "$('xcode-select' -print-path 2>/dev/null)" ]]; then
   e_header "Installing Xcode Command Line Tools."
   sudo xcode-select --install
+  read -n 1 -s -r -p "Press any key to continue after Xcode Command Line Tools are installed"
 fi
 
 # Ensure that we can actually, like, compile anything.
@@ -479,8 +480,7 @@ fi
 if [[ ! -d $DOTFILES ]]; then
   # Dotfiles directory doesn't exist? Clone it!
   e_header "Downloading dotfiles"
-  git clone --branch ${DOTFILES_GH_BRANCH:-master} --recursive \
-    git://github.com/${DOTFILES_GH_USER:-jmlw}/dotfiles.git $DOTFILES
+  git clone --branch master --recursive https://github.com/jmlw/dotfiles.git $DOTFILES
   cd $DOTFILES
 elif [[ "$1" != "restart" ]]; then
   # Make sure we have the latest files.
