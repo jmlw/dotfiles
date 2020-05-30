@@ -20,3 +20,4 @@ function dotfiles() {
 
 src
 [ -s "$HOME/.secrets" ] && source "$HOME/.secrets"
+

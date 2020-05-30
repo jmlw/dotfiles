@@ -220,8 +220,9 @@ clone() {
   then
     echo "URL required to clone git repository"
   else
+    GIT_PROJECTS_PATH=${GIT_PROJECTS_PATH:="${HOME}/projects"}
     REPO_PATH=$(echo "$1" | sed 's|http://||g;s|https://||g;s|git@||g;s|\.git||g;s|:|/|g')
-    git clone "$1" "${HOME}/projects/${REPO_PATH}"
+    git clone "$1" "${GIT_PROJECTS_PATH}/${REPO_PATH}"
   fi
 }
 
