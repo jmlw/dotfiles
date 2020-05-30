@@ -1,4 +1,5 @@
 paths=(
+  /usr/local/sbin
   ~/.local/bin
   $DOTFILES/bin
   /usr/local/bin
@@ -15,4 +16,4 @@ paths=(
 #export PATH="/usr/bin:$PATH"
 export PATH="$DOTFILES/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-
+export PATH="/usr/local/sbin:$PATH"

@@ -153,9 +153,9 @@ fi
 
 # Ensure the cask kegs are installed.
 kegs=(
-  caskroom/cask
-  caskroom/drivers
-  caskroom/fonts
+  homebrew/cask
+  homebrew/cask-drivers
+  homebrew/cask-fonts
   homebrew/cask-versions
 )
 brew_tap_kegs
