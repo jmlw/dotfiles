@@ -85,6 +85,7 @@ plugins=(
   osx
   perms
   pip
+  pipenv
   pyenv
   pylint
   python
