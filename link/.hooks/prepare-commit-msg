@@ -11,7 +11,7 @@ prependBranchName() {
     firstLine=$(head -n1 $COMMIT_MSG_FILE)
     branchNameCountInFirstLine=$(echo "$firstLine" | grep -i "$branchName" | wc -l)
 
-    branchPatternMatches=$(echo "$branchName" | grep -i "^rm-" | wc -l)
+    branchPatternMatches=$(echo "$branchName" | grep -i -E "^(rm-|chore-|fix-)" | wc -l)
 
     if [ "${branchPatternMatches}" -eq 1 ] && [ "${branchNameCountInFirstLine}" -eq 0 ]; then
         echo "[${branchName}] $(cat $COMMIT_MSG_FILE)\n" > $COMMIT_MSG_FILE
