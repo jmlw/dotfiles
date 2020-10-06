@@ -189,6 +189,7 @@ casks=(
   iterm2
   java
   jd-gui
+  karabiner-elements
   keep
   licecap
   macdown
