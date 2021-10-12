@@ -1,21 +1,9 @@
-# Copyright 2019 Google Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 alias k='kubectl'
 alias ksys='kubectl --namespace=kube-system'
 alias ka='kubectl apply --recursive -f'
 alias ksysa='kubectl --namespace=kube-system apply --recursive -f'
+alias kak='kubectl apply -k'
+alias kk='kubectl kustomize'
 alias kex='kubectl exec -i -t'
 alias ksysex='kubectl --namespace=kube-system exec -i -t'
 alias klo='kubectl logs -f'
@@ -23,6 +11,7 @@ alias ksyslo='kubectl --namespace=kube-system logs -f'
 alias klop='kubectl logs -f -p'
 alias ksyslop='kubectl --namespace=kube-system logs -f -p'
 alias kp='kubectl proxy'
+alias kpf='kubectl port-forward'
 alias kg='kubectl get'
 alias ksysg='kubectl --namespace=kube-system get'
 alias kd='kubectl describe'
@@ -704,6 +693,7 @@ alias kgdepwslowidel='kubectl get deployment --watch --show-labels -o=wide -l'
 alias ksysgdepwslowidel='kubectl --namespace=kube-system get deployment --watch --show-labels -o=wide -l'
 alias kexn='kubectl exec -i -t --namespace'
 alias klon='kubectl logs -f --namespace'
+alias kpfn='kubectl port-forward --namespace'
 alias kgn='kubectl get --namespace'
 alias kdn='kubectl describe --namespace'
 alias krmn='kubectl delete --namespace'

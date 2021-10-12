@@ -40,3 +40,10 @@ alias df="df -h"
 alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 # Aliasing eachdir like this allows you to use aliases/functions as commands.
 alias eachdir=". eachdir"
+
+function mvp () {
+    source="$1"
+    target="$2"
+    target_dir="$(dirname "$target")"
+    mkdir --parents $target_dir; mv $source $target
+}
