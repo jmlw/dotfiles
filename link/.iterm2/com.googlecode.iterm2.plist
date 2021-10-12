@@ -48766,12 +48766,14 @@
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>44 83 224 275 0 0 1680 1027 </string>
+	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
+	<string>4652 817 616 174 4240 290 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2650 378 620 392 1680 -390 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4240 839 1074 578 4240 540 1440 877 </string>
+	<string>4240 589 1074 578 4240 290 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>4318 849 850 450 4240 540 1440 877 </string>
+	<string>1906 154 1305 466 1680 -250 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -48799,12 +48801,16 @@
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.3713659942150116</real>
+				<real>0.3726802091114223</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.87939631938934326</real>
+				<real>0.715301513671875</real>
 				<key>Red Component</key>
-				<real>0.69346785545349121</real>
+				<real>0.60109445039482778</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
@@ -50078,14 +50084,18 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {1680, 1050}}</string>
+		<string>{{1680, -250}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{517, 841}</string>
+		<string>{2860, 850}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>99F3B3EB-9F1A-4FC2-A33E-4171C3B4F768</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>4</integer>
+	<integer>6</integer>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>603219101.23716605</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -50872,7 +50882,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-13T13:59:04Z</date>
+	<date>2020-07-09T17:24:58Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
@@ -50880,9 +50890,11 @@
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.2298980496453901</real>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>1</integer>
 	<key>UseBorder</key>
