@@ -18,7 +18,14 @@ today() {
 
 yesterday() {
   NOTES="$HOME/Sync/daily-notes"
-  LAST=`ls -d "$NOTES"/*/*/*.md | tail -n 2 | head -n 1`
+  TODAY=`date +%Y-%m-%d`
+  CURRENT_MONTH=`date +%m`
+  CURRENT_YEAR=`date +%Y`
+  TAIL=1
+  if [ -f "$NOTES/$CURRENT_YEAR/$CURRENT_MONTH/$TODAY.md" ]; then
+    TAIL+=1
+  fi
+  LAST=`ls -d "$NOTES"/*/*/*.md | tail -n $TAIL | head -n 1`
   if [ ! -z "$LAST" ]; then
     echo "opening $LAST"
     $EDITOR $LAST
