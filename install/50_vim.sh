@@ -6,6 +6,7 @@ plugins=(
   "editorconfig-vim|https://github.com/editorconfig/editorconfig-vim.git"
   "vim-polyglot|https://github.com/sheerun/vim-polyglot.git"
   "vim-airline|https://github.com/vim-airline/vim-airline"
+  "vim-checklist|https://github.com/evansalter/vim-checklist.git"
 )
 
 # Download Vim plugins.
