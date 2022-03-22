@@ -59,12 +59,7 @@ formulae=(
   awscli
   aws-elasticbeanstalk
   bash
-  cmatrix
-  cocoapods
   coreutils
-  coreutils
-  cowsay
-  dark-mode
   editorconfig
   findutils
   git
@@ -76,13 +71,11 @@ formulae=(
   gradle
   htop-osx
   hub
-  id3tool
   jq
   kubectx
   kubernetes-cli
   kubernetes-helm
   lesspipe
-  man2html
   maven
   mercurial
   moreutils
@@ -93,28 +86,17 @@ formulae=(
   python
   python3
   docker-compose
-  rbenv
-  reattach-to-user-namespace
   rename
-  rtv
-  ruby
-  ruby-build
   screen
-  sl
   sqlite
   ssh-copy-id
   syncthing
   terminal-notifier
   terraform
-  the_silver_searcher
-  thefuck
-  tmux
-  tmux-xpanes
   tree
   vim
   wget
   yarn
-  youtube-dl
   zsh
   jhipster
 )
@@ -166,34 +148,25 @@ brew cask info this-is-somewhat-annoying 2>/dev/null
 # Homebrew casks
 casks=(
   # Applications
-  a-better-finder-rename
-  adoptopenjdk8
   android-file-transfer
-  android-studio
   android-platform-tools
   aerial
   boostnote
   chromium
-  dash
   datagrip
   disk-inventory-x
   docker
   dropbox
   balenaetcher
-#  filezilla
   firefox
-  gitter
   google-chrome
   hermes
   intellij-idea
   iterm2
   java
   jd-gui
-  karabiner-elements
-  keep
   licecap
   macdown
-  macvim
   mediahuman-audio-converter
   mysqlworkbench
   osxfuse
@@ -201,22 +174,17 @@ casks=(
   plex
   plexamp
   postman
-  pycharm
-  robo-3t
-  skype
   slack
   sourcetree
-  spectacle
   spotify
-  steam
+  #steam
   sublime-text
   telegram
   the-unarchiver
-  tunnelblick
-  vagrant
+  #tunnelblick
+  #vagrant
   visualvm
   vlc
-  webstorm
   # Quick Look plugins
 #  betterzipql
   qlcolorcode
@@ -231,10 +199,10 @@ casks=(
   quicknfo
   suspicious-package
   webpquicklook
-  java8
+  #java8
   # Color pickers
-  colorpicker-developer
-  colorpicker-skalacolor
+  #colorpicker-developer
+  #colorpicker-skalacolor
   # Drivers
   sonos
   # Fonts
@@ -246,7 +214,7 @@ casks=($(setdiff "${casks[*]}" "$(brew cask list 2>/dev/null)"))
 if (( ${#casks[@]} > 0 )); then
   e_header "Installing Homebrew casks: ${casks[*]}"
   for cask in "${casks[@]}"; do
-    brew cask install $cask
+    brew install --cask $cask
   done
   brew cleanup
 fi

@@ -83,7 +83,7 @@ plugins=(
   kubectl
   mvn
   npm
-  osx
+  macos
   perms
   pip
   pipenv
