@@ -1,6 +1,3 @@
-[user]
-  name = Josh Wood
-  email = EMAIL
 [core]
   autocrlf = input
   whitespace = fix,space-before-tab,tab-in-indent,trailing-space
@@ -21,3 +18,11 @@
   pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
   insteadOf = "gist:"
+
+[include "gitdir:~/.dotfiles/**"]
+  path = ~/.gitconfig.personal
+[includeIf "gitdir:~/personal/**"]
+  path = ~/.gitconfig.personal
+
+[includeIf "gitdir:~/work/**"]
+  path = ~/.gitconfig.work
